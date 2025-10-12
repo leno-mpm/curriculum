@@ -1,20 +1,159 @@
-h1{
-    font-weight: bold;
+header {
+  background-color: #ffffff;
+  color: black;
+  padding: 15px 30px;
+  position: fixed;   /* Fija el menú arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  border: 2px solid #cedddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
 }
 
-/* ===== Fondo general ===== */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #3b82f6;
-    color: #222;
-    background-attachment: fixed; /* efecto elegante de fondo estático */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+  background-color: #f7f9fc;         
+  color: #000000;                         
+  margin: 0;                            
+  padding: 0;                          
+}
+
+.navbar {
+  max-width: 1200px;    /* ancho máximo del menú */
+  margin: 0 auto; /*Significa que 0 arriba y abajo y automático derecha e izquierda*/
+  display: flex;
+  justify-content: space-between; /* Extremos fijos */
+  align-items: center;
+}
+
+.nav-left span {
+  font-weight: bold;
+  color: black;
+}
+
+.nav-links {
+  list-style: none; /*elimina las viñetas o números que aparecen por defecto en una lista HTML.*/
+  display: flex;
+  gap: 25px; /*significa que habrá 25 píxeles de separación entre cada elemento dentro de .nav-links.*/
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4; /* Cambia de color al pasar el mouse */
+}
+
+.nav-right a {
+  background: #283566;
+  text-decoration: none;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+main {
+  margin-top: 100px;
+  margin-left: 23px; 
+  padding: 20px;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 46px; 
+  margin: 20px 0px;
 }
 
 section {
-    border: 0.2pt solid #cedddd;         /* borde sólido gris azulado claro */
-    margin: 4px 2px 8px 2px;             /* margen: arriba 4px, derecha 2px, abajo 8px, izquierda 2px */
-    padding: 1.5% 0.8%;                  /* separación vertical 1.5%, horizontal 0.8% */
-    margin-bottom: 1.2rem;               /* margen inferior = 1.2 veces el tamaño de la raíz */
+  margin: 0px 2px 8px 2px;             /* margen: arriba 4px, derecha 2px, abajo 8px, izquierda 2px */
+  padding: 0.8% 3%;                  /* separación vertical 0.8%, horizontal 3% */
+  margin-bottom: 1.2rem;               /* margen inferior = 1.2 veces el tamaño de la raíz */
+}
+
+/*SECCIÓN SOBRE MÍ*/
+#resumen .contenedor {
+  display: flex; /*Esto convierte el contenedor en un contenedor flexible (Flexbox). Todos los hijos directos (.photos y .description) se alinean horizontalmente por defecto.*/
+  align-items: flex-start;   /* alinea arriba | Alineación vertical */
+  justify-content: space-between; /* Extremos fijos */
+  gap: 50px; /* espacio entre foto y descripción | Añade espacio fijo de 50px entre los hijos, más fácil que usar margin en cada div. */
+  flex-wrap: wrap; /* por si en móvil necesita ajustarse */
+  margin-top: 15px;
+}
+
+.photos {
+  display: flex;  
+  justify-content: center;
+  width: 45%;
+  margin: auto auto;
+  
+}
+
+.photos img {
+  width: 80%;              /* tamaño de la imagen */
+  padding: 0 auto;
+  height: auto;              /* mantiene proporción */
+  border-radius: 12px;       /* bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.description {
+  width: 55%;
+  flex: 1;                   /* ocupa el resto del espacio */
+  min-width: 280px;          /* asegura que no se haga demasiado estrecho */
+}
+
+.description table {
+  width: 100%;
+  margin-top: 25px;
+}
+.title-table {
+  font-weight: bold;
+  font-size: 30px;
+  color: #283566;
+}
+
+p{
+  font-size: 18px;
+}
+
+
+/* ---------- ADAPTACIÓN A MÓVILES ---------- */
+@media (max-width: 768px) {
+
+  .navbar{
+    flex-direction: column;
+  }
+
+  .nav-links{
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  p{
+    text-align: center;
+  }
+  #resumen {
+    padding: 30px 20px;
+  }
+
+  #resumen .contenedor {
+    flex-direction: column; 
+    /*flex-direction: column; → cambia la dirección de los hijos del contenedor flex:
+    Normalmente está en fila (row) → hijos uno al lado del otro
+    Ahora pasa a columna → hijos se apilan uno sobre otro
+    Perfecto para móviles, donde el ancho es limitado.*/
+    align-items: center; /*centra los hijos horizontalmente dentro del contenedor.*/
+    text-align: center;
+  }
+  .description {
+    text-align: center;
+  }
 }

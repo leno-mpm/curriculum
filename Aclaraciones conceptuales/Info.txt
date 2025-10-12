@@ -1,0 +1,117 @@
+Explicación sobre margin, border y padding
+
+[ margin ] <-- espacio exterior
+  [ border ] <-- contorno visible
+    [ padding ] <-- espacio interior
+      [ contenido ] <-- texto o imagen
+
+Ejemplo de margin:
+margin-top: 10px;    /* margen superior */
+margin-right: 20px;  /* margen derecho */
+margin-bottom: 15px; /* margen inferior */
+margin-left: 5px;    /* margen izquierdo */
+Forma corta (shorthand) 
+margin: top right bottom left; 
+margin: 10px 20px 15px 5px;
+margin: top&bottom left&right; se puede simplificar a:
+margin: 0 auto;
+Esto significa:
+0 → margen arriba y abajo = 0
+auto → margen izquierda y derecha = automático
+
+Ejemplo de pading
+padding-top: 10px;    /* relleno superior */
+padding-right: 20px;  /* relleno derecho */
+padding-bottom: 15px; /* relleno inferior */
+padding-left: 5px;    /* relleno izquierdo */
+Forma corta (shorthand)
+padding: top right bottom left;
+padding: 10px 20px 15px 5px; 
+
+Ejemplo de border
+border-width: 4px;         /* grosor del borde */
+border-style: solid;       /* estilo: solid, dashed, dotted, double, groove, ridge, inset, outset, none */
+border-color: blue;        /* color del borde */
+Forma corta 
+border: 4px solid blue; 
+border-radius: 10px;       /* redondeo de esquinas */
+Bordes individuales
+border-top: 2px dashed red;
+border-right: 3px dotted green;
+border-bottom: 4px solid orange;
+border-left: 5px double purple;
+box-shadow: 5px 5px 10px rgba(0,0,0,0.3); /* Sombra del borde */
+
+
+
+
+
+
+
+
+
+
+¿Para qué sirve span?
+
+
+
+
+
+
+
+
+
+
+
+
+¿Para qué sirve nav y cuáles son todos sus atributos?
+<nav> es una etiqueta semántica de HTML5.
+Su función es definir una sección de navegación dentro de la página, normalmente menús, enlaces a otras secciones o páginas.
+
+
+
+
+
+
+
+Diferencia entre id y class
+ID
+Único por página: solo puede aparecer una vez en todo el HTML.
+Se usa para identificar un elemento específico.
+En CSS, se selecciona con #
+En JavaScript también se puede acceder fácilmente con getElementById.
+
+CLASS
+Puede repetirse: múltiples elementos pueden tener la misma clase.
+Se usa para aplicar estilos compartidos a varios elementos.
+En CSS, se selecciona con .
+En JavaScript también se puede acceder fácilmente con getElementsByClassName()
+
+
+
+
+
+
+
+¿Qué es display: flex;?
+En CSS, cada elemento tiene un modo de presentación llamado display. Los más comunes son:
+
+block: 	El elemento ocupa toda la línea horizontal (como <div> o <p>).
+inline:	El elemento ocupa solo el espacio de su contenido (como <span> o <a>).
+flex: 	Convierte el elemento en un contenedor flexible, que controla cómo se distribuyen y alinean sus hijos.
+
+Cuando pones:
+.photos {
+  display: flex;
+}
+significa que tu <div class="photos"> ahora es un contenedor flexible (flex container).
+Los hijos directos del contenedor (en tu caso, la imagen) se convierten en flex items, y Flexbox te permite:
+Alinearlos horizontalmente o verticalmente.
+Espaciarlos fácilmente (gap).
+Centrarlos (justify-content y align-items).
+Controlar su tamaño y orden dinámicamente.
+
+El display: flex; es lo que hace que los <div> hijos estén uno al lado del otro.
+Todo lo demás (align-items, justify-content, gap) controla alineación y espacio, pero la clave es flex.
+align-items: Alinea los hijos verticalmente al inicio del contenedor (arriba).  
+
