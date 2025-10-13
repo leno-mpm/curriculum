@@ -23,7 +23,7 @@
 
     
             <div class="nav-right">
-                <a href="#portafolio">Descargar Portafolio</a>
+                <a href="resources/Curriculum + Logros.pdf" download class="btn-descarga">Descargar Portafolio</a>
             </div>
         </nav>
     </header>
@@ -212,8 +212,52 @@
             
         <section id="contacto">
             <h1>Contacto</h1>
-            <!--FORMULARIO GOOGLE MAPS-->
+            <p>Si quieres ponerte en contacto conmigo para proyectos, colaboraciones o consultas, puedes enviarme un mensaje usando el formulario a continuación o ubicarme en el mapa.</p>
+            
+            <div class="contacto-contenedor">
+                <!-- FORMULARIO DE CONTACTO -->
+                <form class="contacto-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+                </form>
+
+                <!-- GOOGLE MAPS EMBED -->
+                <div class="contacto-mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127584.09913464637!2d-80.06250239929261!3d-2.152499026021163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13cbe855805f%3A0x8015a492f4fca473!2sGuayaquil!5e0!3m2!1ses-419!2sec!4v1760326393214!5m2!1ses-419!2sec"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                </div>
+            </div>
+
+            <article class="redes-contenedor">
+                <div class="red-social">
+                    <a href="www.linkedin.com/in/milena-pazmino-montes" target="_blank">
+                        <p>Linkedin | Silvia Milena Pazmiño Montes</p>
+                    </a>
+                </div>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/leno_mpm" target="_blank">
+                        <p>Instagram | @leno_mpm</p>
+                    </a>
+                </div>
+                <div class="red-social">
+                    <a href="mailto:smpazmin@espol.edu.ec">
+                       <p>smpazmin@outlook</p>
+                    </a>
+                </div>
+            </article>
+
         </section>
+
     </main>
     <footer>
         <h5>© 2025 Milena Pazmiño Montes | Estudiante de Ingeniería en Computación</h5>

@@ -186,16 +186,114 @@ article{
   flex:1; /*Dentro del contenedor el 45% la imagen con el 1 coge lo que queda para colocar los project*/
 }
 
+.caja {
+  border-left: 4px solid #3498db; /* grosor, tipo y color del borde */
+  padding: 15px 30px; /* para que el texto no toque el borde */
+}
+/*CONTACTO */
+
+/* Formulario */
+
+.contacto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contacto-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contacto-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.contacto-form button {
+  padding: 12px 25px;
+  background-color: #283566;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contacto-form button:hover {
+  background-color: #2573a6;
+}
+
+/* Mapa */
+.contacto-mapa {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.redes-contenedor {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  gap: 5%; /* espacio entre los cuadrados */
+  margin-top: 20px;
+  
+}
+
+.red-social {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding:15px 0;
+}
+
+.red-social p {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.red-social a{
+  text-decoration: none;
+  color: #3498db;
+  transition: color 0.3s;
+}
+
+
+/*PIE DE PAGINA*/
 footer{
     background-color:#000000;
     padding:0.8% 3%;
     color:#ffffff;
 }
 
-.caja {
-  border-left: 4px solid #3498db; /* grosor, tipo y color del borde */
-  padding: 15px 30px; /* para que el texto no toque el borde */
-}
 
 
 /* ---------- ADAPTACIÓN A MÓVILES ---------- */
@@ -228,5 +326,10 @@ footer{
   }
   .description {
     text-align: center;
+  }
+
+  .redes-contenedor {
+    flex-direction: column;
+    gap: 20px;
   }
 }
