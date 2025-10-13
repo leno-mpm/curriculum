@@ -11,7 +11,7 @@ header {
   border-radius: 8px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -68,7 +68,7 @@ main {
 
 h1{
   font-weight: bold;
-  font-size: 46px; 
+  font-size: 53px; 
   margin: 20px 0px;
 }
 
@@ -79,10 +79,16 @@ section {
 }
 
 /*SECCIÓN SOBRE MÍ*/
-#resumen .contenedor {
+.contenedor {
   display: flex; /*Esto convierte el contenedor en un contenedor flexible (Flexbox). Todos los hijos directos (.photos y .description) se alinean horizontalmente por defecto.*/
   align-items: flex-start;   /* alinea arriba | Alineación vertical */
   justify-content: space-between; /* Extremos fijos */
+  /*
+  significa que los elementos hijos (por ejemplo, .photos y .description) se colocan:
+    Uno pegado a la izquierda.
+    El otro pegado a la derecha.
+    Y el espacio sobrante se reparte entre ellos, no a los lados.
+  */
   gap: 50px; /* espacio entre foto y descripción | Añade espacio fijo de 50px entre los hijos, más fácil que usar margin en cada div. */
   flex-wrap: wrap; /* por si en móvil necesita ajustarse */
   margin-top: 15px;
@@ -105,7 +111,6 @@ section {
 }
 
 .description {
-  width: 55%;
   flex: 1;                   /* ocupa el resto del espacio */
   min-width: 280px;          /* asegura que no se haga demasiado estrecho */
 }
@@ -120,8 +125,64 @@ section {
   color: #283566;
 }
 
+td{
+    padding: 0 20px;
+}
+
 p{
-  font-size: 18px;
+  font-size: 23px;
+}
+
+/* SECTION PROYECTOS*/
+.project{
+  padding:0 10px;
+  display:flex; 
+  flex:1; /*Dentro del contenedor el 40% ladescripcion y con el 1 coge lo que queda para colocar los project*/
+  gap: 20px; 
+  justify-content: space-between;
+}
+
+.project article{
+    font-size:50px;
+}
+
+.contenedor2{
+    width:30%;
+}
+
+.total-image{
+  display:fex;
+  padding:1% auto;
+}
+
+.total-image img{
+  width: 100%;
+  border-radius: 12px;       /* bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1% auto;
+
+}
+
+article{
+    padding: 0 3%;
+}
+
+#hashtag {
+    font-family:'Courier New', Courier, monospace;
+    display: inline-block; 
+    font-size:26px;
+    text-align:center;
+    background: #ffa012;
+    border: #ffa012;
+    padding:10px 5px;
+    border-radius:8px;
+
+}
+
+footer{
+    background-color:#000000;
+    padding:0.8%;
+    color:#ffffff;
 }
 
 
