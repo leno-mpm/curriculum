@@ -23,6 +23,7 @@ body {
 }
 
 .navbar {
+  width:100%;
   max-width: 1200px;    /* ancho máximo del menú */
   margin: 0 auto; /*Significa que 0 arriba y abajo y automático derecha e izquierda*/
   display: flex;
@@ -194,7 +195,7 @@ article{
 
 /* Formulario */
 
-.contacto-contenedor {
+.cyfcontenedor {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -241,6 +242,14 @@ article{
 
 .contacto-form button:hover {
   background-color: #2573a6;
+}
+/*Testimonio*/
+.ctestimonio{
+  gap:15px;
+  margin-top: 20px;
+  border-radius: 12px;
+  width:40%;
+  background-color: #c0e6ff;
 }
 
 /* Mapa */
