@@ -130,14 +130,14 @@ td{
 }
 
 p{
-  font-size: 23px;
+  font-size: 20px;
 }
 
 /* SECTION PROYECTOS*/
 .project{
   padding:0 10px;
   display:flex; 
-  flex:1; /*Dentro del contenedor el 40% ladescripcion y con el 1 coge lo que queda para colocar los project*/
+  flex:1; /*Dentro del contenedor el 40% la descripcion y con el 1 coge lo que queda para colocar los project*/
   gap: 20px; 
   justify-content: space-between;
 }
@@ -168,21 +168,33 @@ article{
 }
 
 #hashtag {
-    font-family:'Courier New', Courier, monospace;
-    display: inline-block; 
-    font-size:26px;
-    text-align:center;
-    background: #ffa012;
-    border: #ffa012;
-    padding:10px 5px;
-    border-radius:8px;
+  font-family:'Courier New', Courier, monospace;
+  display: inline-block; 
+  font-size:26px;
+  text-align:center;
+  background: #ffa012;
+  border: #ffa012;
+  padding:10px 5px;
+  border-radius:8px;
+  font-weight: bold;
 
+}
+/* FORMACION*/
+
+.formacion{
+  padding:0 10px;
+  flex:1; /*Dentro del contenedor el 45% la imagen con el 1 coge lo que queda para colocar los project*/
 }
 
 footer{
     background-color:#000000;
-    padding:0.8%;
+    padding:0.8% 3%;
     color:#ffffff;
+}
+
+.caja {
+  border-left: 4px solid #3498db; /* grosor, tipo y color del borde */
+  padding: 15px 30px; /* para que el texto no toque el borde */
 }
 
 
