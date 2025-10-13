@@ -286,15 +286,12 @@ article{
   transition: color 0.3s;
 }
 
-
 /*PIE DE PAGINA*/
 footer{
     background-color:#000000;
     padding:0.8% 3%;
     color:#ffffff;
 }
-
-
 
 /* ---------- ADAPTACIÓN A MÓVILES ---------- */
 @media (max-width: 768px) {
