@@ -97,10 +97,10 @@ section {
 
 .photos {
   display: flex;  
+  flex-direction: column;
   justify-content: center;
   width: 45%;
   margin: auto auto;
-  
 }
 
 .photos img {
@@ -135,20 +135,21 @@ p{
 }
 
 /* SECTION PROYECTOS*/
-.project{
-  padding:0 10px;
-  display:flex; 
-  flex:1; /*Dentro del contenedor el 40% la descripcion y con el 1 coge lo que queda para colocar los project*/
-  gap: 20px; 
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-rows: repeat(2, auto);  /* 2 filas */
+  gap: 20px;
   justify-content: space-between;
+  flex: 2;
 }
 
-.project article{
+.project-grid article{
     font-size:50px;
 }
 
 .contenedor2{
-    width:30%;
+    flex:1;
 }
 
 .total-image{
@@ -191,6 +192,7 @@ article{
   border-left: 4px solid #3498db; /* grosor, tipo y color del borde */
   padding: 15px 30px; /* para que el texto no toque el borde */
 }
+
 /*CONTACTO */
 
 /* Formulario */
@@ -302,6 +304,31 @@ footer{
     color:#ffffff;
 }
 
+/*EFECTO HOWER*/
+.project-grid article {
+  /*transition: [propiedad] [duración] [función-tiempo], [propiedad] [duración] [función-tiempo];*/
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius:12px;
+}
+
+.project-grid article:hover {
+  transform: translateY(-5px); /* Se eleva un poquito */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más marcada */
+}
+
+.red-social {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.red-social:hover{
+  transform: translateY(-5px); /* Elevación ligera */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+  background-color: #283566; 
+}
+.red-social:hover p {
+  color: white; /* Letras blancas sobre fondo oscuro */
+}
+
 /* ---------- ADAPTACIÓN A MÓVILES ---------- */
 @media (max-width: 768px) {
 
@@ -338,4 +365,6 @@ footer{
     flex-direction: column;
     gap: 20px;
   }
+
+
 }

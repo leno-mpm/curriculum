@@ -34,9 +34,10 @@
             <p>¡Bienvenido a mi espacio en línea! Aquí descubrirás mi trayectoria profesional, mis pasiones y las experiencias que me definen.</p>
 
             <div class="contenedor">
-                <div class="photos">
-                    <img src="resources/Foto.png">
-                </div>
+                <figure class="photos">
+                    <img src="resources/Foto.png" alt="Foto de Milena Pazmiño Montes">
+                    <figcaption>Silvia Milena Pazmiño Montes - Estudiante de Ingeniería en Computación</figcaption>
+                </figure>
 
                 <div class="description">
                     <h1>Estudiante de Ingeniería en Computación con <i>pasión por los datos</i> y la <i>inteligencia artificial</i></h1>
@@ -70,9 +71,10 @@
         <section id="proyectos">
             <h1>Proyectos <i>destacados</i></h1>
             <p>Descubre mis proyectos más representativos, donde fusiono <br>creatividad, innovación y aprendizaje continuo.</p>
-            <div class="total-image">
-                <img src="resources/foto-proyecto.png">
-            </div>
+            <figure class="total-image">
+                <img src="resources/foto-proyecto.png" alt="Vista previa de proyectos destacados">
+                <figcaption>Proyectos más representativos</figcaption>
+            </figure>
 
             <div class="contenedor">
                 <div class="contenedor2">
@@ -81,27 +83,23 @@
                     <p id="hashtag">#CSS</p>
                     <p id="hashtag">#IA</p>
                 </div>
-                <div class="project">
-                    <div>
-                        <article>
-                            <p class="title-table">Predicción académica</p>
-                            <p>Modelo predictivo en R que utiliza regresión lineal y logística para predecir rendimiento académico, implementado con ggplot2 y dplyr para análisis visual avanzado.</p>
-                        </article>
-                        <article >
-                            <p class="title-table">Juego Uno</p>
-                            <p>Implementación completa del clásico juego UNO en Java, aplicando principios de POO y manejo de colecciones.</p>
-                        </article>
-                    </div>
-                    <div>
-                        <article >
-                            <p class="title-table">Gestión de Inventario</p>
-                            <p>Sistema completo de gestión con CRUD, procedimientos almacenados y triggers en SQL, diseñado para optimizar el control de stock en empresa automotriz.</p>
-                        </article>
-                        <article >
-                            <p class="title-table">Optimización - Gira de conciertos</p>
-                            <p>Solución al Problema del Agente Viajero en Python usando NetworkX, planificando la ruta más eficiente para giras de conciertos minimizando distancias</p>
-                        </article>
-                    </div>
+                <div class="project-grid">
+                    <article>
+                        <p class="title-table">Predicción académica</p>
+                        <p>Modelo predictivo en R que utiliza regresión lineal y logística para predecir rendimiento académico, implementado con ggplot2 y dplyr para análisis visual avanzado.</p>
+                    </article>
+                    <article>
+                        <p class="title-table">Juego Uno</p>
+                        <p>Implementación completa del clásico juego UNO en Java, aplicando principios de POO y manejo de colecciones.</p>
+                    </article>
+                    <article>
+                        <p class="title-table">Gestión de Inventario</p>
+                        <p>Sistema completo de gestión con CRUD, procedimientos almacenados y triggers en SQL, diseñado para optimizar el control de stock en empresa automotriz.</p>
+                    </article>
+                    <article>
+                        <p class="title-table">Optimización - Gira de conciertos</p>
+                        <p>Solución al Problema del Agente Viajero en Python usando NetworkX, planificando la ruta más eficiente para giras de conciertos minimizando distancias.</p>
+                    </article>
                 </div>
             </div>
         
@@ -110,7 +108,7 @@
         <section id="experiencia">
             <h1>Mi carrera y educación</h1>
             <p>Explora mi trayectoria académica y profesional, destacando mis logros, formación y experiencia relevante.</p>
-            
+
                 <div class="contenedor">
                     <article class="formacion">
                         <h3><i>Escuela Superior Politécnica del Litoral</i></h3>
@@ -118,9 +116,18 @@
                         <p><strong>Estado:</strong> 51% de avance en la carrera - Actualmente cursando</p>
                         <p>Durante mi formación en ESPOL, he participado en proyectos académicos, ayudantías y conferencias que me han permitido aplicar conocimientos de manera práctica y desarrollar habilidades clave en programación e IA.</p>
                     </article>
-                    <div class="photos">
-                        <img src="resources/fiec.jpeg">
-                    </div>
+                    <figure class="photos">
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/uL08feCEnLE" 
+                            title="Video presentación de mi trayectoria académica y profesional" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <figcaption>Video: ADN Espol</figcaption>
+                    </figure>
                     
                 </div>
 
@@ -231,12 +238,20 @@
             
             <div class="cyfcontenedor">
                 <!-- FORMULARIO DE CONTACTO -->
-                <form class="contacto-form">
+                <form class="contacto-form" action="mailto:smpazmin@espol.edu.ec" method="post" enctype="text/plain">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
 
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" required>
+
+                    <label for="motivo">Motivo de contacto:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="" disabled selected>Selecciona un motivo</option>
+                        <option value="proyecto">Colaboración en proyecto</option>
+                        <option value="consulta">Consulta académica</option>
+                        <option value="otro">Otro</option>
+                    </select>
 
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
@@ -256,7 +271,7 @@
             <article class="redes-contenedor">
                 <div class="red-social">
                     <a href="https://www.linkedin.com/in/milena-pazmino-montes/" target="_blank">
-                        <p>Linkedin | Silvia Milena Pazmiño Montes</p>
+                        <p>Linkedin | Silvia Pazmiño</p>
                     </a>
                 </div>
                 <div class="red-social">
